@@ -10,3 +10,18 @@ body{
   font-family: 'Inter', sans-serif;
   color: var(--color);
 }
+
+/* Allow long article titles, tags, and names to wrap in narrow layouts. */
+#root {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+button, a, input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid #9ca3af;
+  outline-offset: 4px;
+}

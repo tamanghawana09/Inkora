@@ -37,7 +37,7 @@ function FeaturedPost() {
 
   if (loading) {
     return (
-      <section className="max-w-6xl mx-auto mt-12 px-5">
+      <section className="max-w-6xl mx-auto mt-8 px-4 sm:mt-12 sm:px-5">
         <div className="h-80 animate-pulse rounded-[32px] border border-gray-800 bg-gray-950" />
       </section>
     );
@@ -48,7 +48,7 @@ function FeaturedPost() {
   }
 
   return (
-    <section className="max-w-6xl mx-auto mt-12 px-5">
+    <section className="max-w-6xl mx-auto mt-8 px-4 sm:mt-12 sm:px-5">
       <div className="mb-5 flex items-center justify-between">
         <h2 className="text-sm font-medium uppercase tracking-widest text-gray-500">
           Featured Post
@@ -71,18 +71,18 @@ function FeaturedPost() {
                 "https://placehold.co/1000x700?text=Inkora"
               }
               alt={post.title}
-              className="h-full min-h-[320px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="h-52 w-full sm:h-72 md:h-full md:min-h-[320px] object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
 
           {/* Content */}
-          <div className="flex flex-col justify-center p-8 md:p-12">
+          <div className="flex min-w-0 flex-col justify-center p-5 sm:p-8 lg:p-12">
 
             <div className="flex items-center gap-3">
               <img
                 src={post.user.profile_image}
                 alt={post.user.name}
-                className="h-10 w-10 rounded-full"
+                className="h-10 w-10 shrink-0 rounded-full"
               />
 
               <div>
@@ -96,7 +96,7 @@ function FeaturedPost() {
               </div>
             </div>
 
-            <h1 className="mt-6 text-3xl font-bold leading-tight text-white md:text-4xl">
+            <h1 className="mt-6 text-2xl sm:text-3xl font-bold leading-tight text-white md:text-4xl">
               {post.title}
             </h1>
 
@@ -117,7 +117,7 @@ function FeaturedPost() {
             </div>
 
             {/* Bottom */}
-            <div className="mt-8 flex items-center justify-between gap-4">
+            <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
 
               <span className="text-xs text-gray-600">
                 ❤️ {post.public_reactions_count} reactions
@@ -127,7 +127,7 @@ function FeaturedPost() {
                 href={post.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-gray-700 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-gray-900"
+                className="inline-flex min-h-11 items-center justify-center rounded-full border border-gray-700 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-gray-900"
               >
                 Read Article →
               </a>

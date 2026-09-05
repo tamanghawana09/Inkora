@@ -3,8 +3,8 @@ import { FaFacebook,FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="mt-24 border-t border-gray-800">
-      <div className="max-w-6xl mx-auto px-5 py-12">
+    <footer className="mt-12 sm:mt-24 border-t border-gray-800">
+      <div className="max-w-6xl mx-auto px-4 py-8 sm:px-5 sm:py-12">
 
         {/* Top Section */}
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
@@ -27,11 +27,11 @@ function Footer() {
               Explore
             </h3>
 
-            <ul className="mt-4 space-y-3 text-sm text-gray-500">
+            <ul className="mt-2 space-y-1 text-sm text-gray-500">
               <li>
                 <Link
                   to="/"
-                  className="transition-colors duration-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center transition-colors duration-300 hover:text-white"
                 >
                   Home
                 </Link>
@@ -40,7 +40,7 @@ function Footer() {
               <li>
                 <Link
                   to="/about"
-                  className="transition-colors duration-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center transition-colors duration-300 hover:text-white"
                 >
                   About
                 </Link>
@@ -49,7 +49,7 @@ function Footer() {
               <li>
                 <Link
                   to="/blog"
-                  className="transition-colors duration-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center transition-colors duration-300 hover:text-white"
                 >
                   Blog
                 </Link>
@@ -58,7 +58,7 @@ function Footer() {
               <li>
                 <Link
                   to="/contact"
-                  className="transition-colors duration-300 hover:text-white"
+                  className="inline-flex min-h-11 items-center transition-colors duration-300 hover:text-white"
                 >
                   Contact
                 </Link>
@@ -79,7 +79,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="FaceBook"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-800 text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:border-gray-600 hover:bg-white hover:text-gray-900"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-800 text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:border-gray-600 hover:bg-white hover:text-gray-900"
               >
                 <FaFacebook />
               </a>
@@ -89,7 +89,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-800 text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:border-gray-600 hover:bg-white hover:text-gray-900"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-800 text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:border-gray-600 hover:bg-white hover:text-gray-900"
               >
                 <FaGithub />
               </a>
@@ -99,7 +99,7 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-800 text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:border-gray-600 hover:bg-white hover:text-gray-900"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-800 text-gray-500 transition-all duration-300 hover:-translate-y-1 hover:border-gray-600 hover:bg-white hover:text-gray-900"
               >
                 <FaLinkedin />
               </a>

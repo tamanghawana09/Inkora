@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import { FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
@@ -7,15 +7,15 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="max-w-6xl mx-auto mt-5 px-5">
-      <div className="flex items-center justify-between rounded-[99px] border border-gray-800 p-4 sm:p-5 shadow-[0_4px_20px_rgba(255,255,255,0.3)]">
+    <nav aria-label="Main navigation" className="max-w-6xl mx-auto mt-4 px-4 sm:mt-5 sm:px-5">
+      <div className="flex items-center justify-between gap-3 rounded-[99px] border border-gray-800 p-3 sm:p-5 shadow-[0_4px_20px_rgba(255,255,255,0.3)]">
 
         {/* Logo */}
         <Link to="/">
           <img
             src={logo}
             alt="Logo"
-            className="w-[140px] sm:w-[140px]"
+            className="w-28 sm:w-[140px]"
           />
         </Link>
 
@@ -72,8 +72,11 @@ function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="flex md:hidden items-center justify-center rounded-full border border-gray-300 p-3 text-gray-800 transition-all bg-white duration-300 hover:bg-gray-100"
-          aria-label="Toggle menu"
+          className="flex min-h-11 min-w-11 shrink-0 md:hidden items-center justify-center rounded-full border border-gray-300 p-3 text-gray-800 transition-all bg-white duration-300 hover:bg-gray-100"
+          type="button"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -81,17 +84,25 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-navigation"
+        inert={!menuOpen}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") {
+            setMenuOpen(false);
+            event.currentTarget.previousElementSibling.querySelector("button").focus();
+          }
+        }}
         className={`md:hidden overflow-hidden transition-all duration-300 ${
           menuOpen ? "max-h-96 opacity-100 mt-3" : "max-h-0 opacity-0"
         }`}
       >
         <div className="rounded-3xl border border-gray-800 p-5">
-          <ul className="flex flex-col gap-5">
+          <ul className="flex flex-col gap-1">
             <li>
               <Link
                 to="/"
                 onClick={() => setMenuOpen(false)}
-                className="block transition-colors duration-300 hover:text-gray-500"
+                className="flex min-h-11 items-center transition-colors duration-300 hover:text-gray-500"
               >
                 Home
               </Link>
@@ -101,7 +112,7 @@ function Navbar() {
               <Link
                 to="/about"
                 onClick={() => setMenuOpen(false)}
-                className="block transition-colors duration-300 hover:text-gray-500"
+                className="flex min-h-11 items-center transition-colors duration-300 hover:text-gray-500"
               >
                 About
               </Link>
@@ -111,7 +122,7 @@ function Navbar() {
               <Link
                 to="/blog"
                 onClick={() => setMenuOpen(false)}
-                className="block transition-colors duration-300 hover:text-gray-500"
+                className="flex min-h-11 items-center transition-colors duration-300 hover:text-gray-500"
               >
                 Blog
               </Link>
@@ -121,7 +132,7 @@ function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="block transition-colors duration-300 hover:text-gray-500"
+                className="flex min-h-11 items-center transition-colors duration-300 hover:text-gray-500"
               >
                 Contact
               </Link>

@@ -1,14 +1,13 @@
-import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Footer from "../components/Footer";
 
 function Contact() {
   return (
-    <main className="max-w-6xl mx-auto px-5">
+    <main className="max-w-6xl mx-auto px-4 sm:px-5">
 
       {/* Hero */}
-      <section className="min-h-[75vh] flex flex-col items-center justify-center text-center">
-        <h1 className="mt-8 max-w-4xl text-5xl font-bold leading-[0.95] tracking-tight text-white md:text-7xl">
+      <section className="py-12 md:min-h-[75vh] md:py-16 flex flex-col items-center justify-center text-center">
+        <h1 className="mt-8 max-w-4xl text-4xl sm:text-5xl font-bold leading-[0.95] tracking-tight text-white md:text-7xl">
           So...
           <br />
           you actually
@@ -23,7 +22,7 @@ function Contact() {
         </p>
 
         {/* Social Links */}
-        <div className="mt-10 flex gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-3 sm:mt-10 sm:gap-4">
 
           <a
             href="https://github.com/tamanghawana09"
@@ -51,7 +50,7 @@ function Contact() {
 
 
       {/* Savage Section */}
-      <section className="border-t border-gray-800 py-24 text-center">
+      <section className="border-t border-gray-800 py-12 md:py-24 text-center">
 
         <p className="text-xs uppercase tracking-[0.2em] text-gray-700">
           Important information
@@ -73,9 +72,9 @@ function Contact() {
 
 
       {/* Final Message */}
-      <section className="pb-32 text-center">
+      <section className="pb-12 md:pb-32 text-center">
 
-        <div className="mx-auto max-w-3xl rounded-[32px] border border-gray-800 bg-gray-950 p-10 md:p-16">
+        <div className="mx-auto max-w-3xl rounded-[32px] border border-gray-800 bg-gray-950 p-5 sm:p-10 md:p-16">
 
           <p className="text-sm text-gray-600">
             Anyway...

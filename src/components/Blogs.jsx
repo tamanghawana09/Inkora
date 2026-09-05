@@ -55,7 +55,7 @@ function ArticleResults({ selectedTag, searchTerm }) {
   }, [page, selectedTag, searchTerm, retry]);
 
   return (
-    <div className="max-w-6xl mx-auto mt-10 px-5">
+    <div className="max-w-6xl mx-auto mt-8 px-4 sm:mt-10 sm:px-5">
       {/* Cards */}
       {loading ? (
         <p className="text-center text-gray-400">Loading...</p>
@@ -92,12 +92,12 @@ function ArticleResults({ selectedTag, searchTerm }) {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-5 sm:p-6">
                 <div className="flex items-center gap-3">
                   <img
                     src={article.user.profile_image}
                     alt={article.user.name}
-                    className="h-9 w-9 rounded-full"
+                    className="h-9 w-9 shrink-0 rounded-full"
                   />
 
                   <div>
@@ -134,7 +134,7 @@ function ArticleResults({ selectedTag, searchTerm }) {
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex rounded-full border border-gray-700 px-5 py-2.5
+                  className="mt-6 inline-flex min-h-11 items-center rounded-full border border-gray-700 px-5 py-2.5
                   text-sm font-medium text-white transition-all duration-300
                   hover:-translate-y-1 hover:bg-white hover:text-gray-900"
                 >
@@ -147,11 +147,11 @@ function ArticleResults({ selectedTag, searchTerm }) {
       )}
 
       {/* Pagination */}
-      <div className="flex items-center justify-center gap-4 my-12">
+      <div className="flex flex-wrap items-center justify-center gap-2 my-8 sm:gap-4 sm:my-12">
         <button
           onClick={() => { setLoading(true); setPage((prev) => prev - 1); }}
           disabled={page === 1 || loading}
-          className="rounded-full border border-gray-800 px-5 py-2.5
+          className="min-h-11 rounded-full border border-gray-800 px-3 py-2.5 sm:px-5
           text-sm text-white transition-all duration-300
           hover:-translate-y-1 hover:bg-white hover:text-gray-900
           disabled:cursor-not-allowed disabled:opacity-30
@@ -160,14 +160,14 @@ function ArticleResults({ selectedTag, searchTerm }) {
           ← Previous
         </button>
 
-        <span className="rounded-full border border-gray-800 px-5 py-2.5 text-sm text-gray-400">
+        <span className="min-h-11 rounded-full border border-gray-800 px-3 py-2.5 sm:px-5 text-sm text-gray-400">
           Page {page}
         </span>
 
         <button
           onClick={() => { setLoading(true); setPage((prev) => prev + 1); }}
           disabled={loading || Boolean(error) || !hasNextPage}
-          className="rounded-full border border-gray-800 px-5 py-2.5
+          className="min-h-11 rounded-full border border-gray-800 px-3 py-2.5 sm:px-5
           text-sm text-white transition-all duration-300
           hover:-translate-y-1 hover:bg-white hover:text-gray-900
           disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:translate-y-0"

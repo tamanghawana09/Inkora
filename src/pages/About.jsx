@@ -1,18 +1,17 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import MouseFollowingEyes from '../components/MouseFollowingEyes'
 import Footer from '../components/Footer'
 
 function About() {
   return (
-    <main className="max-w-6xl mx-auto px-5">
+    <main className="max-w-6xl mx-auto px-4 sm:px-5">
 
       {/* Hero */}
-      <section className="min-h-[70vh] flex flex-col items-center justify-center text-center">
+      <section className="pb-12 md:min-h-[70vh] md:pb-16 flex flex-col items-center justify-center text-center">
 
         <MouseFollowingEyes />
 
-        <h1 className="mt-6 max-w-4xl text-5xl font-bold tracking-tight text-white md:text-7xl">
+        <h1 className="mt-6 max-w-4xl text-4xl sm:text-5xl font-bold tracking-tight text-white md:text-7xl">
           A place for
           <span className="text-gray-500"> ideas worth sharing.</span>
         </h1>
@@ -26,9 +25,9 @@ function About() {
 
 
       {/* What is Inkora */}
-      <section className="border-t border-gray-800 py-24">
+      <section className="border-t border-gray-800 py-12 md:py-24">
 
-        <div className="grid gap-12 md:grid-cols-2 md:items-center">
+        <div className="grid gap-6 md:gap-12 md:grid-cols-2 md:items-center">
 
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-gray-600">
@@ -115,9 +114,9 @@ function About() {
 
 
       {/* Mission */}
-      <section className="py-32">
+      <section className="py-12 md:py-32">
 
-        <div className="rounded-[32px] border border-gray-800 bg-gray-950 p-8 md:p-14">
+        <div className="rounded-[32px] border border-gray-800 bg-gray-950 p-5 sm:p-8 md:p-14">
 
           <p className="text-sm uppercase tracking-[0.2em] text-gray-600">
             Our idea
@@ -140,7 +139,7 @@ function About() {
 
 
       {/* CTA */}
-      <section className="pb-28 text-center">
+      <section className="pb-12 md:pb-28 text-center">
 
         <h2 className="text-3xl font-bold text-white md:text-4xl">
           Ready to explore?
