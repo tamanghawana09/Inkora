@@ -1,8 +1,13 @@
 import React from 'react'
+import Blogs from '../components/Blogs'
+import Footer from '../components/Footer'
 
 function Blog() {
   return (
-    <div>Blog</div>
+    <div>
+      <Blogs />
+       <Footer />
+    </div>
   )
 }
 

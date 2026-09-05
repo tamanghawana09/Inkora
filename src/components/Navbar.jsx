@@ -15,7 +15,7 @@ function Navbar() {
           <img
             src={logo}
             alt="Logo"
-            className="w-[140px] sm:w-[180px]"
+            className="w-[140px] sm:w-[140px]"
           />
         </Link>
 

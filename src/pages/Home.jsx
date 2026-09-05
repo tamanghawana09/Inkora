@@ -1,17 +1,20 @@
-import React from 'react'
 import Search from '../components/Search';
 import FeaturedPost from '../components/FeaturedPost';
 import Blogs from '../components/Blogs';
-import Author from '../components/Author';
 import Footer from '../components/Footer';
+import {useState} from 'react';
 
 function Home() {
+
+  const [selectedTag, setSelectedTag] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   return (
     <>
-        <Search />
+
         <FeaturedPost />
-        <Blogs />
-        <Author />
+        <Search selectedTag={selectedTag} searchTerm={searchTerm} setSelectedTag={setSelectedTag}
+         setSearchTerm={setSearchTerm} />
+        <Blogs selectedTag={selectedTag} searchTerm={searchTerm}/>
         <Footer />
 
     </>
